@@ -9,7 +9,7 @@ services:
       # On Windows Host:
       # - //var/run/docker.sock:/var/run/docker.sock
       # On Linux Host:
-      # - //var/run/docker.sock:/var/run/docker.sock
+      # - /var/run/docker.sock:/var/run/docker.sock
       - //var/run/docker.sock:/var/run/docker.sock
       - "${MODULES_BACKEND_LOCATION}:/service/modules_backend"
       - "${MODULES_FRONTEND_LOCATION}:/service/modules_frontend"
