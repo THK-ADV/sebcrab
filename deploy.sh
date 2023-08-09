@@ -2,8 +2,8 @@
 
 backend_img_name=mocogi-backend
 frontend_img_name=mocogi-frontend
-frontend_path=/service/module_frontend
-backend_path=/service/module_backend
+frontend_path=/service/modules_frontend
+backend_path=/service/modules_backend
 dock_hub_URL=dockhub.gm.fh-koeln.de
 dock_hub_username=dobrynin
 dock_hub_img_location=${dock_hub_URL}/${dock_hub_username}/${backend_img_name}
