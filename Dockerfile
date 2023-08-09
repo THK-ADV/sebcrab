@@ -1,8 +1,12 @@
-FROM denoland/deno:latest as base
+FROM denoland/deno:alpine as base
 
 WORKDIR /service
 
-RUN apt-get update && apt-get install -y git
+RUN apk update
+RUN apk upgrade
+RUN apk add git
+RUN apk add docker
+RUN apk add docker-compose
 
 COPY . ./
 
