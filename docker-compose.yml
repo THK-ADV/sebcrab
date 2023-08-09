@@ -1,0 +1,21 @@
+version: '1.0'
+
+services:
+  sebcrab:
+    container_name: sebcrab
+    image: deno
+    restart: always
+    volumes:
+      # On Windows Host:
+      # - //var/run/docker.sock:/var/run/docker.sock
+      # On Linux Host:
+      # - //var/run/docker.sock:/var/run/docker.sock
+      - //var/run/docker.sock:/var/run/docker.sock
+      - "${MODULES_BACKEND_LOCATION}:/service/modules_backend"
+      - "${MODULES_FRONTEND_LOCATION}:/service/modules_frontend"
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: base
+    ports:
+      - "${PORT}:${PORT}"
