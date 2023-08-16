@@ -5,7 +5,7 @@ export function performPullInRepository(path: string) {
   return command.output();
 }
 
-export async function runDeplymentScriptWithArgument(argument: string) {
+export async function runDeploymentScriptWithArgument(argument: string) {
   const command = new Deno.Command('sh', { args: ['./deploy.sh', argument], stderr: 'inherit', stdout: 'inherit' })
   const result = await command.output()
   const code = result.code

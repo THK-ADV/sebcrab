@@ -6,7 +6,7 @@ import {
 
 import {
   performPullInRepository,
-  runDeplymentScriptWithArgument,
+  runDeploymentScriptWithArgument,
 } from "./utils.ts"
 
 import * as Responses from './responses.ts'
@@ -20,11 +20,11 @@ const handler: Deno.ServeHandler = async (request: Request): Promise<Response> =
   switch (repositoryId) {
     case MODULES_FRONTEND_REPOSITORY_ID: {
       await performPullInRepository('/service/modules_frontend')
-      return runDeplymentScriptWithArgument('frontend')
+      return runDeploymentScriptWithArgument('frontend')
     }
     case MODULES_BACKEND_REPOSITORY_ID: {
       await performPullInRepository('/service/modules_backend')
-      return runDeplymentScriptWithArgument('backend')
+      return runDeploymentScriptWithArgument('backend')
     }
     default:
       return Responses.unknownRepoResponse
