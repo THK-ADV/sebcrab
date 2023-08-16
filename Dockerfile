@@ -12,4 +12,4 @@ COPY . ./
 
 RUN deno cache src/main.ts
 
-CMD [ "deno", "run", "--allow-net", "--allow-read","--allow-env", "--allow-run", "src/main.ts" ]
+CMD [ "deno", "run", "--allow-net", "--allow-read", "--allow-env", "--allow-run", "src/main.ts" ]
